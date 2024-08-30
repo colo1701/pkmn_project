@@ -1,8 +1,8 @@
-import pkmn_classes as pkmn
+import mnstr_classes as mnstr
 
 if __name__ == '__main__':
-    player1 = pkmn.Pokemon("Pikachu", 200, 20, 35, "Superzahn", "", "", "")
-    player2 = pkmn.Pokemon("Rattfratz", 200, 30, 20, "Biss", "", "", "")
+    player1 = mnstr.Mnstr("Testomon", "Normal", 100, 40, 20, "Spencer-Schelle", "Hill-Haken", "", "")
+    player2 = mnstr.Mnstr("Bugnorris", "Normal", 200, 20, 20, "Roundhouse-Kick", "5-PPHET", "", "")
 
     while player1.active and player2.active:
         player1.do_damage(player2, player1.att1)

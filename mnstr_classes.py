@@ -7,16 +7,16 @@ with open('attacks.txt', 'r') as file:
         values = line.strip().split(',')
         attack_dict[str(values[1])] = {'id': int(values[0]),
                                        'name': str(values[1]),
-                                       'type': str(values[2]),
+                                       'm_type': str(values[2]),
                                        'category': str(values[3]),
                                        'damage': int(values[4]),
                                        'probability': float(values[5]),
                                        'ap': int(values[6])}
 
-class Pokemon:
-    def __init__(self, name, hp_i, att_val, def_val, att1, att2, att3, att4):
+class Mnstr:
+    def __init__(self, name, m_type, hp_i, att_val, def_val, att1, att2, att3, att4):
         self.name = name
-        self.type = type
+        self.m_type = m_type
         self.hp_i = hp_i
         self.hp_f = hp_i
         self.active = True
@@ -26,6 +26,7 @@ class Pokemon:
         self.att2 = att2
         self.att3 = att3
         self.att4 = att4
+        self.state = ""
 
     def get_damage(self, dmg):
         self.hp_f -= dmg
